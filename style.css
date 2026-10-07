@@ -1,0 +1,52 @@
+/* Rakuly 公開ページ（紹介・プライバシーポリシー・サポート）共通 */
+:root {
+  --bg: #f4f7f5;
+  --surface: #ffffff;
+  --ink: #18261f;
+  --muted: #5b6b62;
+  --line: #d9e3dd;
+  --green: #2e7d55;
+  --green-soft: #e3f0e8;
+  --yellow: #ffd166;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101814; --surface: #17221c; --ink: #e5eee8; --muted: #9db0a5;
+    --line: #2a3a31; --green: #5cc192; --green-soft: #1d3328;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.mark { display: flex; }
+.mark i { width: 22px; height: 22px; border-radius: 50%; display: block; }
+.mark i:first-child { background: var(--green); }
+.mark i:last-child { background: var(--yellow); margin-left: -7px; box-shadow: -3px 0 0 var(--bg); }
+.brand b { font-size: 20px; letter-spacing: 0.02em; }
+nav { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 14px; font-size: 14px; }
+nav a { color: var(--muted); }
+nav a[aria-current="page"] { color: var(--green); font-weight: 700; }
+main { margin-top: 36px; }
+h1 { font-size: clamp(26px, 5vw, 34px); line-height: 1.35; margin: 0 0 8px; }
+h2 { font-size: 19px; margin: 36px 0 8px; padding-top: 4px; }
+p, ul { margin: 0 0 14px; }
+ul { padding-left: 1.3em; }
+li { margin: 4px 0; }
+a { color: var(--green); }
+.lead { color: var(--muted); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin: 18px 0; }
+.qa dt { font-weight: 700; margin-top: 18px; }
+.qa dd { margin: 4px 0 0; color: var(--ink); }
+.meta { color: var(--muted); font-size: 14px; }
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
